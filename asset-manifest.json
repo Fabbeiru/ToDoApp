@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Fabbeiru/ToDoApp/static/css/main.d893fb0f.css",
+    "main.js": "/Fabbeiru/ToDoApp/static/js/main.3b7dd2d8.js",
+    "index.html": "/Fabbeiru/ToDoApp/index.html",
+    "main.d893fb0f.css.map": "/Fabbeiru/ToDoApp/static/css/main.d893fb0f.css.map",
+    "main.3b7dd2d8.js.map": "/Fabbeiru/ToDoApp/static/js/main.3b7dd2d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d893fb0f.css",
+    "static/js/main.3b7dd2d8.js"
+  ]
+}
