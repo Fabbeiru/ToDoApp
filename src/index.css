@@ -12,8 +12,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: rgb(11,146,175);
-  background: linear-gradient(0deg, rgba(123,232,204,1) 0%, rgba(11,146,175,1) 100%);
+  background-color: #7de1fa;
 }
 
 .wrapper {
@@ -23,9 +22,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid black;
-  border-radius: 20px;
-  background-color: #e2d0e2;
 }
 
 header {
@@ -68,6 +64,41 @@ header h1 {
 .input-form button:active {
   transform: scale(0.9);
   color: white;
+}
+
+.task-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 15px;
+  margin-top: 15px;
+}
+
+.task {
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.task h2 {
+  align-self: flex-start;
+  margin-right: 15px;
+}
+
+.buttons-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttons-wrapper button {
+  margin-left: 5px;
+  padding: 5px;
 }
 
 @media (min-width: 768px) {

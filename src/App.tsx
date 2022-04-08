@@ -15,8 +15,12 @@ function App() {
 
   const handleSubmit = (e: FormElement) => {
     e.preventDefault(); // Avoid default behaviour of a form -> reload page
-    addTask(newTask);
-    setNewTask('');
+    if (newTask !== '') {
+      addTask(newTask);
+      setNewTask('');
+    } else {
+      alert("Please enter a task.");
+    }
   }
 
   const addTask = (description: string) => {
@@ -47,17 +51,18 @@ function App() {
         <form className='input-form' onSubmit={handleSubmit}>
           <input type="text" placeholder='Write your task here' autoFocus
             value={newTask} onChange={(e) => setNewTask(e.target.value)}/>
-          <button type="submit" className='input-button'>Save</button>
+          <button type="submit" className='input-button' title="Create task">Save</button>
         </form>
 
         <div className="task-wrapper">
           {
             tasks.map((t: Task, i: number) => (
-              <div className="task" key={i}>
+              <div className="task" key={i} style={{backgroundColor: t.completed ? '#7fff00' : 'white'}}>
                 <h2 style={{textDecoration: t.completed ? 'line-through' : ''}}>{t.description}</h2>
-                <p>{t.completed + ''}</p>
-                <button className="complete-task" onClick={() => completeTask(i)}>✓</button>
-                <button className="erase-task" onClick={() => removeTask(i)}>✗</button>
+                <div className="buttons-wrapper">
+                  <button className="complete-task" onClick={() => completeTask(i)} title="Mark as completed">✓</button>
+                  <button className="erase-task" onClick={() => removeTask(i)} title="Remove task">✗</button>
+                </div>
               </div>
             ))
           }
