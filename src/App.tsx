@@ -59,10 +59,8 @@ function App() {
             tasks.map((t: Task, i: number) => (
               <div className="task" key={i} style={{backgroundColor: t.completed ? '#7fff00' : 'white'}}>
                 <h2 style={{textDecoration: t.completed ? 'line-through' : ''}}>{t.description}</h2>
-                <div className="buttons-wrapper">
-                  <button className="complete-task" onClick={() => completeTask(i)} title="Mark as completed">✓</button>
-                  <button className="erase-task" onClick={() => removeTask(i)} title="Remove task">✗</button>
-                </div>
+                <button className="complete-task" onClick={() => completeTask(i)} title="Mark as completed">✓</button>
+                <button className="erase-task" onClick={() => removeTask(i)} title="Remove task">✗</button>
               </div>
             ))
           }
