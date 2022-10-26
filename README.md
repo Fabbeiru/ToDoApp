@@ -1,7 +1,7 @@
 # To Do App
 Basic To Do app to learn and practise React.js with TypeScript. Check it out [here](https://fabbeiru.github.io/ToDoApp/).
 
-<p align="center"><img src="/ToDoAppv1.png"/></p>
+<p align="center"><img src="/ToDoAppv1.png"/><img src="/ToDoAppv2.png"/></p>
 
 ## Future improvements and functionalities
 - ~~Improve styling~~
