@@ -95,18 +95,20 @@ header {
 }
 
 .task-wrapper {
+  max-width: 90%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 15px;
-  margin-top: 15px;
+  margin: 15px 0 25px;
 }
 
 .task {
-  min-width: 150px;
+  max-width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   flex-direction: row;
   border: 1px solid black;
   border-radius: 15px;
@@ -114,12 +116,16 @@ header {
 }
 
 .task h2 {
-  width: 100%;
-  align-self: flex-start;
-  margin-right: 15px;
+  width: 60%;
+  height: auto;
+  align-self: center;
+  margin-right: 20px;
+  word-wrap: break-word;
 }
 
 .task button {
+  height: 40px;
+  min-width: 40px;
   margin-left: 5px;
   padding: 5px;
   border: none;
