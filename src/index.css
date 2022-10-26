@@ -108,7 +108,7 @@ header {
   max-width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: row;
   border: 1px solid black;
   border-radius: 15px;
@@ -118,9 +118,15 @@ header {
 .task h2 {
   width: 60%;
   height: auto;
-  align-self: center;
   margin-right: 20px;
   word-wrap: break-word;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .task button {
@@ -130,6 +136,7 @@ header {
   padding: 5px;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
