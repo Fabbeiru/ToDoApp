@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from './blackLogo.png';
 import './index.css';
 
 type FormElement = React.FormEvent<HTMLFormElement>;
@@ -26,7 +27,6 @@ function App() {
   const addTask = (description: string) => {
     const aux: Task[] = [...tasks, {description, completed: false}];
     setTasks(aux);
-    console.log(aux);
   }
 
   const completeTask = (i: number) => {
@@ -43,11 +43,14 @@ function App() {
 
   return (
     <div className="App">
-      <div className='wrapper'>
+      <div className="header-wrapper">
         <header>
-          <h1>To Do App</h1>
+          <h1>To Do app</h1>
+          <img className='logo' src={ logo } alt="Fabbeiru's logo" />
         </header>
+      </div>
 
+      <div className='wrapper'>
         <form className='input-form' onSubmit={handleSubmit}>
           <input type="text" placeholder='Write your task here' autoFocus
             value={newTask} onChange={(e) => setNewTask(e.target.value)}/>
@@ -57,7 +60,7 @@ function App() {
         <div className="task-wrapper">
           {
             tasks.map((t: Task, i: number) => (
-              <div className="task" key={i} style={{backgroundColor: t.completed ? '#7fff00' : 'white'}}>
+              <div className="task" key={i} style={{backgroundColor: t.completed ? 'var(--green)' : 'var(--white)'}}>
                 <h2 style={{textDecoration: t.completed ? 'line-through' : ''}}>{t.description}</h2>
                 <button className="complete-task" onClick={() => completeTask(i)} title="Mark as completed">✓</button>
                 <button className="erase-task" onClick={() => removeTask(i)} title="Remove task">✗</button>
